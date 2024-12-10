@@ -18,7 +18,7 @@ html.fixed {
   width: 100%;
 }
 body {
-  height: 10000px;
+  padding-top: 44px; /* 헤더 높이만큼 패딩 추가 */
   font-size: 16px;
   line-height: 1;
   font-family: "Roboto", "Noto Sans KR", "sans-serif";
@@ -198,9 +198,14 @@ header {
   background-color: var(--color-header);
   position: relative;
   z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 header .inner {
   max-width: 1020px;
+  
 }
 header ul.menu {
   height: var(--header-height);

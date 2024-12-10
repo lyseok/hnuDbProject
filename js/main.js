@@ -161,3 +161,62 @@ promotionToggleBtn.addEventListener('click', function() {
     promotionEl.classList.remove('hide'); // 'hide' 클래스 제거
   }
 });
+
+
+
+
+// --------------------------------------구분선---------------------------------------
+
+
+
+
+
+// // 사이드바 메뉴 열기/닫기 처리 함수
+// function slideMenuHandler(e) {
+//   const slideOpenBtn = document.querySelector(".top-nav-modal"); // 슬라이드 메뉴 열기 버튼
+//   const slideCloseBtn = document.querySelector(".category-close"); // 슬라이드 메뉴 닫기 버튼
+//   const slideMenu = document.querySelector(".top-nav-category"); // 슬라이드 메뉴 요소
+
+//   const target = e.target; // 클릭된 요소
+//   const parentTarget = e.target.parentNode; // 클릭된 요소의 부모 요소
+//   const activetarget = e.currentTarget.document.activeElement; // 현재 활성화된 요소
+
+//   if (parentTarget === slideOpenBtn) { 
+//     // 클릭된 요소의 부모가 슬라이드 열기 버튼인 경우
+//     slideMenu.classList.add("open"); // 슬라이드 메뉴 열기
+//   } else if (activetarget === slideCloseBtn || target !== slideMenu) {
+//     // 클릭된 요소가 닫기 버튼이거나 슬라이드 메뉴 외부 클릭 시
+//     slideMenu.classList.remove("open"); // 슬라이드 메뉴 닫기
+//   }
+// }
+
+// window.addEventListener("click", slideMenuHandler); // 클릭 이벤트 리스너 추가
+
+// 새 상품 영역의 가로 스크롤 처리 함수
+// function newItemWheel(e) {
+//   const newListBox = document.querySelector(".new-box"); // 새 상품 리스트 박스
+
+//   if (e.path[3] === newListBox) {
+//     // 이벤트 경로 상에서 새 상품 리스트 박스가 포함된 경우
+//     document.body.classList.add("stop-scrolling"); // 수직 스크롤 중지
+//     e.deltaY > 0
+//       ? (newListBox.scrollLeft += 40) // 아래로 스크롤하면 가로 스크롤 오른쪽으로 이동
+//       : (newListBox.scrollLeft -= 40); // 위로 스크롤하면 가로 스크롤 왼쪽으로 이동
+//   } else {
+//     document.body.classList.remove("stop-scrolling"); // 리스트 박스 외부에서는 스크롤 중지 해제
+//   }
+// }
+
+// window.addEventListener("wheel", newItemWheel); // 마우스 휠 이벤트 리스너 추가
+
+// // 상단 네비게이션 바 스크롤 감지 함수
+// function scrollControll() {
+//   const topNav = document.querySelector(".top-nav"); // 상단 네비게이션 바
+//   const topScroll = document.documentElement.scrollTop; // 현재 문서의 스크롤 위치
+
+//   topScroll
+//     ? topNav && topNav.classList.add("back-color") // 스크롤 위치가 0 이상이면 배경색 추가
+//     : topNav.classList.remove("back-color"); // 스크롤 위치가 0이면 배경색 제거
+// }
+
+// window.addEventListener("scroll", scrollControll); // 스크롤 이벤트 리스너 추가
