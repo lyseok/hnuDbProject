@@ -278,9 +278,13 @@
 
 .goods-card {
   padding: 2rem;
-  background-color: rgb(241, 241, 241);
+  /* background-color: rgb(241, 241, 241); */
   border-radius: 10px;
   margin-bottom: 3.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .goods-card .card-img-box {
@@ -304,7 +308,7 @@
 
 .card-info .card-precis .card-price {
   font-size: 2rem;
-  margin-right: 4rem;
+  margin-right: rem;
 }
 
 .card-info .card-precis .card-icon {

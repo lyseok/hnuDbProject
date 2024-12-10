@@ -86,37 +86,60 @@ function displayItems(shoesBox, currentPageNum) {
 }
 
 // 상품 하나의 HTML을 생성하는 함수
+// export function createHTML(shoes) {
+//   return /* html */`
+//     <li class="goods-card">
+//       <a href=detail.html?${shoes.id}>
+//       <div class="card-img-box">
+//           <img src="${shoes.image}" alt="${shoes.productName}" class="card-img">
+//       </div>
+//       <div class="card-info">
+//           <div class="card-title">
+//             <p>${shoes.productName}</p>
+//             <p>${shoes.writer}</p>
+//           </div>
+//             </a>
+//           <div class="card-precis">
+//             <span class="card-price">${shoes.price.toLocaleString()}</span>
+//             <button type="button" data-id=${shoes.id}
+//               class="card-icon like-icon">${shoes.wish
+//               ? `<i class='bx bxs-heart' style='color:#d64040'></i>` // 위시리스트에 있는 경우
+//               : `<i class='bx bx-heart'></i>` // 위시리스트에 없는 경우
+//             }</button>
+//             <button type="button" data-id=${shoes.id} 
+//             class="card-icon cart-icon"><i class='bx bx-cart'></i>
+//             </button>
+//           </div>               
+//       </div>      
+//     </li>
+// `;
+// }
 export function createHTML(shoes) {
-  return `
+  return /* html */`
     <li class="goods-card">
-      <div class="card-img-box">
-          <img src="${shoes.image}" alt="${shoes.productName}" class="card-img">
-      </div>
-      <div class="card-info">
-          <div class="card-title">
-              <p>${shoes.productName}</p>
-              <p>${shoes.writer}</p>
-          </div>
-          <div class="card-precis">
-              <span class="card-price">${shoes.price.toLocaleString()}</span>
-              <button type="button" data-id=${
-                shoes.id
-              } class="card-icon like-icon">${
-    shoes.wish
-      ? `<i class='bx bxs-heart' style='color:#d64040'></i>` // 위시리스트에 있는 경우
-      : `<i class='bx bx-heart'></i>` // 위시리스트에 없는 경우
-  }</button>
-              <button type="button" data-id=${
-                shoes.id
-              } class="card-icon cart-icon"><i class='bx bx-cart'></i></button>
-              <a href=detail.html?${
-                shoes.id
-              } class="card-icon more-icon"><i class='bx bxs-plus-square'></i></a>
-          </div>               
-      </div>        
-    </li>
+      <a href=detail.html?${shoes.id} class="product">
+        <img src="${shoes.image}" alt="${shoes.productName}" width="225">
+        <div class="product-name">
+          <p>${shoes.productName}</p>
+          <p>${shoes.writer}</p>
+          <p>${shoes.price.toLocaleString()}</p>
+        </div>
+      </a>
+      <div class="card-precis">
+        <button type="button" data-id=${shoes.id}
+          class="card-icon like-icon">${shoes.wish
+          ? `<i class='bx bxs-heart' style='color:#d64040'></i>` // 위시리스트에 있는 경우
+          : `<i class='bx bx-heart'></i>` // 위시리스트에 없는 경우
+        }</button>
+        <button type="button" data-id=${shoes.id} 
+        class="card-icon cart-icon"><i class='bx bx-cart'></i>
+        </button>
+      </div>               
+    </div>      
+  </li>
 `;
 }
+
 
 // 페이지네이션을 설정하고 데이터를 렌더링하는 함수
 function pagination(shoesBox) {
