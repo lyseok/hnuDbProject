@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management (HNU)</title>
+
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/reset.css" />
+  <link rel="stylesheet" href="/static/css/main.css">
+
+  <!-- RESET CSS
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" /> -->
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <!-- icon -->
+  <link
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+
+  <script defer type="module" src="/static/js/header.js"></script>
+  <script defer type="module" src="/static/js/loadNewItem.js"></script>
+
+</head>
+<body>
+  <!-- Header -->
+  <Header>
+    <div class="inner">
+
+      <ul class="menu">
+        <li class="hnu-logo"><a href="./index.html">HNU</a></li>
+        <li><a href="./best.html">베스트</a></li>
+        <li><a href="./new.html">신상품</a></li>
+        <li><a href="javascript:void(0)">이벤트</a></li>
+        <li><a href="javascript:void(0)">국내도서</a></li>
+        <li><a href="javascript:void(0)">외국도서</a></li>
+        <li><a href="javascript:void(0)">eBook</a></li>
+        <li><a href="javascript:void(0)">고객지원</a></li>
+        <li class="search-starter"><a href="javascript:void(0)">검색</a></li>
+        <li class="basket-starter">
+          <a href="javascript:void(0)">장바구니</a>
+          <div class="basket">
+            <div class="arrow"></div>
+            <div class="message">
+              장바구니가 비어 있습니다.
+            </div>
+            <ul>
+              <li><a href="./cart.html">장바구니</a></li>
+              <li><a href="./wishlist.html">찜 목록</a></li>
+              <li><a href="javascript:void(0)">주문</a></li>
+              <li><a href="javascript:void(0)">계정</a></li>
+              <li><a href="./login.html">로그인</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <div class="search-wrap">
+        <div class="search">
+          <div class="shadow"></div>
+          <div class="textfield">
+            <input type="text" placeholder="Library Management 검색">
+            <div class="search-icon"></div>
+            <div class="search-closer"></div>
+          </div>
+          <div class="autocompletes">
+            <h3>실시간 인기 검색어</h3>
+            <ul>
+              <li><a href="javascript:void(0)">한강</a></li>
+              <li><a href="javascript:void(0)">다이어리</a></li>
+              <li><a href="javascript:void(0)">소년이 온다</a></li>
+              <li><a href="javascript:void(0)">유시민</a></li>
+              <li><a href="javascript:void(0)">탁상달력</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="badges">
+      <div class="badge">
+        <img src="/static/images/badge1.png" alt="Bagde" />
+      </div>
+      <div class="badge">
+        <img src="/static/images/badge2.png" alt="Bagde" />
+      </div>
+    </div>
+
+  </Header>
+
+
+    <!-- goods -->
+  <main id="goods" class="goods-page">
+    <div class="sec-top">
+      <h1 class="sec-tit">신상품</h1>
+      <p class="sec-desc goods-desc">최신등록 상품</p>
+    </div>
+    <ul class="goods-container"></ul>
+    
+  </main>
+
+
+
+  <!-- footer -->
+  <footer data-include-path="footer.html"></footer>
+
+</body>
+</html>
